@@ -1,0 +1,87 @@
+{
+  "frames": {
+    "pcta.png": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 481,
+        "h": 191
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 481,
+        "h": 191
+      },
+      "sourceSize": {
+        "w": 481,
+        "h": 191
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "counter-bkg.png": {
+      "frame": {
+        "x": 3,
+        "y": 200,
+        "w": 400,
+        "h": 117
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 400,
+        "h": 117
+      },
+      "sourceSize": {
+        "w": 400,
+        "h": 117
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "hand.png": {
+      "frame": {
+        "x": 3,
+        "y": 323,
+        "w": 100,
+        "h": 162
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 162
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 162
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "game.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 487,
+      "h": 488
+    },
+    "scale": 1
+  }
+}
