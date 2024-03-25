@@ -20,7 +20,7 @@ export class GameView extends PixiGrid {
     }
 
     private build(): void {
-        //
+        this.buildBoard();
     }
 
     private buildBoard() {

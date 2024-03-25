@@ -1,71 +1,335 @@
 {
   "frames": {
-    "pcta.png": {
+    "lane.png": {
       "frame": {
         "x": 3,
         "y": 3,
-        "w": 481,
-        "h": 191
+        "w": 1820,
+        "h": 308
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 481,
-        "h": 191
+        "w": 1820,
+        "h": 308
       },
       "sourceSize": {
-        "w": 481,
-        "h": 191
+        "w": 1820,
+        "h": 308
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "counter-bkg.png": {
+    "fence.png": {
       "frame": {
         "x": 3,
-        "y": 200,
-        "w": 400,
-        "h": 117
+        "y": 317,
+        "w": 1818,
+        "h": 41
       },
       "rotated": false,
-      "trimmed": false,
+      "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
+        "x": 1,
         "y": 0,
-        "w": 400,
-        "h": 117
+        "w": 1818,
+        "h": 41
       },
       "sourceSize": {
-        "w": 400,
-        "h": 117
+        "w": 1820,
+        "h": 41
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "hand.png": {
+    "sky.png": {
       "frame": {
         "x": 3,
-        "y": 323,
-        "w": 100,
-        "h": 162
+        "y": 364,
+        "w": 1810,
+        "h": 167
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 100,
-        "h": 162
+        "w": 1810,
+        "h": 167
       },
       "sourceSize": {
-        "w": 100,
-        "h": 162
+        "w": 1810,
+        "h": 167
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "arena.png": {
+      "frame": {
+        "x": 3,
+        "y": 537,
+        "w": 1798,
+        "h": 97
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 0,
+        "w": 1798,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 1800,
+        "h": 97
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "finish.png": {
+      "frame": {
+        "x": 3,
+        "y": 640,
+        "w": 197,
+        "h": 394
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 197,
+        "h": 394
+      },
+      "sourceSize": {
+        "w": 197,
+        "h": 394
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "diamondsStart.png": {
+      "frame": {
+        "x": 206,
+        "y": 640,
+        "w": 224,
+        "h": 271
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 271
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 271
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubsStart.png": {
+      "frame": {
+        "x": 436,
+        "y": 640,
+        "w": 183,
+        "h": 209
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 183,
+        "h": 209
+      },
+      "sourceSize": {
+        "w": 183,
+        "h": 209
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "heartsStart.png": {
+      "frame": {
+        "x": 625,
+        "y": 640,
+        "w": 156,
+        "h": 181
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 156,
+        "h": 181
+      },
+      "sourceSize": {
+        "w": 156,
+        "h": 181
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "spadesStart.png": {
+      "frame": {
+        "x": 436,
+        "y": 855,
+        "w": 126,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 126,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 126,
+        "h": 160
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "start.png": {
+      "frame": {
+        "x": 568,
+        "y": 855,
+        "w": 96,
+        "h": 144
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 96,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 96,
+        "h": 144
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "diamondsClosed.png": {
+      "frame": {
+        "x": 670,
+        "y": 827,
+        "w": 53,
+        "h": 136
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 53,
+        "h": 136
+      },
+      "sourceSize": {
+        "w": 53,
+        "h": 136
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubsClosed.png": {
+      "frame": {
+        "x": 206,
+        "y": 917,
+        "w": 30,
+        "h": 93
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 30,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 30,
+        "h": 93
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "heartsClosed.png": {
+      "frame": {
+        "x": 242,
+        "y": 917,
+        "w": 23,
+        "h": 74
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 74
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "spadesClosed.png": {
+      "frame": {
+        "x": 1807,
+        "y": 537,
+        "w": 15,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 56
       },
       "pivot": {
         "x": 0.5,
@@ -79,8 +343,8 @@
     "image": "game.png",
     "format": "RGBA8888",
     "size": {
-      "w": 487,
-      "h": 488
+      "w": 1826,
+      "h": 1037
     },
     "scale": 1
   }
