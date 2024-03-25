@@ -1,10 +1,10 @@
-import { Container, Graphics, Rectangle, Sprite } from 'pixi.js';
+import { Container, Graphics, Rectangle } from 'pixi.js';
+import { Arena } from './Arena';
+import { StartingGate } from './StartingGate';
 
 export class BoardView extends Container {
-    private arena: Sprite;
-    private fence: Sprite;
-    private lane: Sprite;
-    private sky: Sprite;
+    private arena: Arena;
+    private startingGate: StartingGate;
 
     constructor() {
         super();
@@ -21,20 +21,12 @@ export class BoardView extends Container {
     }
 
     private build(): void {
-        this.arena = Sprite.from('arena.png');
-        this.fence = Sprite.from('fence.png');
-        this.lane = Sprite.from('lane.png');
-        this.sky = Sprite.from('sky.png');
-
-        this.sky.position.set(0, 0);
-        this.arena.position.set(-2, 128);
-        this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
-        this.lane.position.set(1, this.fence.y);
-
-        this.addChild(this.sky);
+        this.arena = new Arena();
         this.addChild(this.arena);
-        this.addChild(this.lane);
-        this.addChild(this.fence);
+
+        this.startingGate = new StartingGate();
+        this.startingGate.position.set(300, 140);
+        this.addChild(this.startingGate);
 
         // this.drawBounds();
     }
