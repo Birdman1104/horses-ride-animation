@@ -1,14 +1,19 @@
+import { lego } from '@armathai/lego';
 import { Container, Graphics, Rectangle } from 'pixi.js';
+import { BoardEvents } from '../events/MainEvents';
+import { GameModelEvents } from '../events/ModelEvents';
+import { GameState } from '../models/GameModel';
 import { Arena } from './Arena';
-import { StartingGate } from './StartingGate';
 
 export class BoardView extends Container {
     private arena: Arena;
-    private startingGate: StartingGate;
+
+    private canMove = false;
 
     constructor() {
         super();
 
+        lego.event.on(GameModelEvents.StateUpdate, this.onGameStateUpdate, this);
         this.build();
     }
 
@@ -21,19 +26,31 @@ export class BoardView extends Container {
     }
 
     public update(): void {
+        if (!this.canMove) return;
         this.arena?.update();
-        this.startingGate?.update();
     }
 
     private build(): void {
         this.arena = new Arena();
+        this.arena.on('horseReachedFinishLine', () => {
+            lego.event.emit(BoardEvents.HorseReachedFinish);
+        });
         this.addChild(this.arena);
 
-        this.startingGate = new StartingGate();
-        this.startingGate.position.set(300, 140);
-        this.addChild(this.startingGate);
-
         // this.drawBounds();
+    }
+
+    private onGameStateUpdate(state: GameState): void {
+        this.canMove = state === GameState.Action;
+
+        switch (state) {
+            case GameState.Action:
+                this.arena.start();
+                break;
+
+            default:
+                break;
+        }
     }
 
     private drawBounds(): void {

@@ -1,3 +1,4 @@
+import { CLUBS, DIAMONDS, HEARTS, SPADES } from '../configs/Constants';
 import { getData } from '../gameLogic';
 import { ObservableModel } from './ObservableModel';
 
@@ -62,13 +63,36 @@ export class GameModel extends ObservableModel {
         this._diamondsSegment = value;
     }
 
+    public setState(state: GameState): void {
+        this._state = state;
+    }
+
     public async initialize(): Promise<void> {
-        // this._state = GameState.Unknown;
         await this.updateData();
-        this.data;
+
+        if (anySegmentBiggerThanZero(this.data)) {
+            this.state = GameState.Action;
+
+            this._spadesSegment = getSegmentOf(SPADES, this.data);
+            this._heartsSegment = getSegmentOf(HEARTS, this.data);
+            this._clubsSegment = getSegmentOf(CLUBS, this.data);
+            this._diamondsSegment = getSegmentOf(DIAMONDS, this.data);
+        }
     }
 
     public async updateData(): Promise<void> {
         this.data = await getData();
     }
 }
+
+const getSegmentOf = (type: string, data: any): number => {
+    return data.find((el) => el.name === type).properties.find((p) => p.name === 'Segment').value;
+};
+
+const anySegmentBiggerThanZero = (data: any): boolean => {
+    return !!data.find((el) => el.properties.find((p) => p.name === 'Segment').value > 0);
+};
+
+const getPlaceOf = (type: string, data: any): number => {
+    return data.find((el) => el.name === type).properties.find((p) => p.name === 'Place').value;
+};

@@ -1,6 +1,6 @@
 import { lego } from '@armathai/lego';
-import { MainGameEvents } from '../events/MainEvents';
-import { onMainViewReadyCommand } from './Commands';
+import { BoardEvents, MainGameEvents } from '../events/MainEvents';
+import { onHorseReachedFinishCommand, onMainViewReadyCommand } from './Commands';
 
 export const mapCommands = () => {
     eventCommandPairs.forEach(({ event, command }) => {
@@ -18,5 +18,9 @@ const eventCommandPairs = Object.freeze([
     {
         event: MainGameEvents.MainViewReady,
         command: onMainViewReadyCommand,
+    },
+    {
+        event: BoardEvents.HorseReachedFinish,
+        command: onHorseReachedFinishCommand,
     },
 ]);

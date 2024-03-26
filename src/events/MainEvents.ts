@@ -9,5 +9,5 @@ export const MainGameEvents = {
 };
 
 export const BoardEvents = {
-    //
+    HorseReachedFinish: 'BoardEventsHorseReachedFinish',
 };

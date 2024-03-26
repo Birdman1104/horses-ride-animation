@@ -282,3 +282,11 @@ export const DATA = {
         gameType: 'CARD_RACER',
     },
 };
+
+// Step 1 :
+
+// gameData :  We only focus on the Spades, Hearts, Clubs, Diamonds
+// if segment value is zero means race is not started.
+// if any one of these card segment value is not zero its means race is started. now check the place value .
+
+// if Status of these object is IN_PLAY then we will check if place object have and value of place (1,2,3) is the number of hourse , 1 is first 2 is second, 3 is 3rd and so on.

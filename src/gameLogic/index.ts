@@ -1,3 +1,4 @@
+import { CARDS } from '../configs/Constants';
 import { DATA } from './GameConfig';
 
 const fetchData = async (): Promise<any> => {
@@ -11,6 +12,8 @@ const fetchData = async (): Promise<any> => {
 export async function getData() {
     const data = await fetchData();
 
-    const { gameData } = data.channel.game;
-    console.warn(gameData);
+    const { objects } = data.channel.game.gameData;
+    const arr = objects.filter((e) => CARDS.indexOf(e.name) !== -1);
+
+    return arr;
 }

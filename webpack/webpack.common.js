@@ -68,7 +68,7 @@ module.exports = {
                 { from: './src/assets/audio', to: 'assets/audio' },
                 { from: './src/assets/fonts', to: 'assets/fonts' },
                 { from: './src/assets/spines', to: 'assets/spines' },
-                { from: './src/assets/uncompressed', to: 'assets/uncompressed' },
+                // { from: './src/assets/uncompressed', to: 'assets/uncompressed' },
             ],
         }),
     ],
