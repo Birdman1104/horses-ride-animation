@@ -4,12 +4,18 @@ import { ForegroundView } from './views/ForegroundView';
 import { GameView } from './views/GameView';
 
 class PixiStage extends Container {
+    private started = false;
     private bgView: BackgroundView;
     private gameView: GameView;
     private foregroundView: ForegroundView;
 
     constructor() {
         super();
+    }
+
+    public update(): void {
+        if (!this.started) return;
+        this.gameView?.update();
     }
 
     public resize(): void {
@@ -25,6 +31,8 @@ class PixiStage extends Container {
         this.addChild(this.gameView);
         this.foregroundView = new ForegroundView();
         this.addChild(this.foregroundView);
+
+        this.started = true;
     }
 }
 

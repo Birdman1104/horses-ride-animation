@@ -11,6 +11,10 @@ export class GameView extends PixiGrid {
         this.build();
     }
 
+    public update(): void {
+        this.board?.update();
+    }
+
     public getGridConfig(): ICellConfig {
         return getGameViewGridConfig();
     }

@@ -20,6 +20,11 @@ export class BoardView extends Container {
         return new Rectangle(0, 0, 800, 600);
     }
 
+    public update(): void {
+        this.arena?.update();
+        this.startingGate?.update();
+    }
+
     private build(): void {
         this.arena = new Arena();
         this.addChild(this.arena);

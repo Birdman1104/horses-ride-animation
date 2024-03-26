@@ -120,9 +120,33 @@
         "y": 0.5
       }
     },
-    "diamondsStart.png": {
+    "horse.png": {
       "frame": {
         "x": 206,
+        "y": 640,
+        "w": 300,
+        "h": 365
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 300,
+        "h": 365
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 365
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "diamondsStart.png": {
+      "frame": {
+        "x": 512,
         "y": 640,
         "w": 224,
         "h": 271
@@ -146,7 +170,7 @@
     },
     "clubsStart.png": {
       "frame": {
-        "x": 436,
+        "x": 742,
         "y": 640,
         "w": 183,
         "h": 209
@@ -170,7 +194,7 @@
     },
     "heartsStart.png": {
       "frame": {
-        "x": 625,
+        "x": 931,
         "y": 640,
         "w": 156,
         "h": 181
@@ -194,7 +218,7 @@
     },
     "spadesStart.png": {
       "frame": {
-        "x": 436,
+        "x": 742,
         "y": 855,
         "w": 126,
         "h": 160
@@ -218,7 +242,7 @@
     },
     "start.png": {
       "frame": {
-        "x": 568,
+        "x": 874,
         "y": 855,
         "w": 96,
         "h": 144
@@ -242,7 +266,7 @@
     },
     "diamondsClosed.png": {
       "frame": {
-        "x": 670,
+        "x": 976,
         "y": 827,
         "w": 53,
         "h": 136
@@ -266,7 +290,7 @@
     },
     "clubsClosed.png": {
       "frame": {
-        "x": 206,
+        "x": 512,
         "y": 917,
         "w": 30,
         "h": 93
@@ -290,7 +314,7 @@
     },
     "heartsClosed.png": {
       "frame": {
-        "x": 242,
+        "x": 548,
         "y": 917,
         "w": 23,
         "h": 74

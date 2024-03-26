@@ -12,10 +12,6 @@ const getForegroundGridLandscapeConfig = () => {
         bounds,
         cells: [
             {
-                name: 'logo',
-                bounds: { x: 0.9, y: 0, width: 0.1, height: 0.1 },
-            },
-            {
                 name: 'tutorial',
                 bounds: { x: 0, y: 0, width: 1, height: 1 },
             },
@@ -30,10 +26,6 @@ const getForegroundGridPortraitConfig = () => {
         // debug: { color: 0xff5027 },
         bounds,
         cells: [
-            {
-                name: 'logo',
-                bounds: { x: 0.9, y: 0, width: 0.1, height: 0.1 },
-            },
             {
                 name: 'tutorial',
                 bounds: { x: 0, y: 0, width: 1, height: 1 },

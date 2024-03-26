@@ -60,18 +60,14 @@ class App extends Application {
     private loadAssets(): void {
         for (const asset of assets) {
             const { name, path } = asset;
-            console.warn(name);
-
             this.loader.add(name, path);
         }
         for (const atlas of atlases) {
             const { name, json } = atlas;
-            console.warn(name);
             this.loader.add(name, json);
         }
         for (const font of fonts) {
             const { name, path } = font;
-            console.warn(name);
             this.loader.add(name, path);
         }
 
@@ -87,6 +83,7 @@ class App extends Application {
     private onLoadComplete(): void {
         this.appResize();
         this.stage.start();
+        this.ticker.add(() => this.stage.update());
         lego.command.execute(mapCommands);
         lego.event.emit(MainGameEvents.MainViewReady);
     }

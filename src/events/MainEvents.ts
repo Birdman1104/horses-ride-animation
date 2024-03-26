@@ -9,9 +9,5 @@ export const MainGameEvents = {
 };
 
 export const BoardEvents = {
-    LogoClick: 'BoardEventsLogoClick',
-};
-
-export const UIViewEvents = {
-    PCtaClick: 'UIViewEventsPCtaClick',
+    //
 };

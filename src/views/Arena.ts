@@ -15,6 +15,10 @@ export class Arena extends Container {
         this.build();
     }
 
+    public update(): void {
+        //
+    }
+
     public move(): void {
         this.arena.x -= 0.001;
         this.arena2.x -= 0.001;

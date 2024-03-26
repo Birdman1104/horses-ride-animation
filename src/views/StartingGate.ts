@@ -25,6 +25,10 @@ export class StartingGate extends Container {
         return [this.spades, this.hearts, this.clubs, this.diamonds];
     }
 
+    public update(): void {
+        //
+    }
+
     private build(): void {
         this.startingGate = Sprite.from('start.png');
         this.spades = Sprite.from('spadesStart.png');

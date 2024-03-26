@@ -1,9 +1,6 @@
 import { ICellConfig, PixiGrid } from '@armathai/pixi-grid';
-import { Sprite } from 'pixi.js';
 import { getForegroundGridConfig } from '../configs/gridConfigs/ForegroundViewGC';
 export class ForegroundView extends PixiGrid {
-    private logo: Sprite;
-
     constructor() {
         super();
 
@@ -19,11 +16,6 @@ export class ForegroundView extends PixiGrid {
     }
 
     private build(): void {
-        this.buildLogo();
-    }
-
-    private buildLogo(): void {
-        this.logo = Sprite.from('logo.png');
-        this.setChild('logo', this.logo);
+        //
     }
 }
