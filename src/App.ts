@@ -2,11 +2,8 @@ import { lego, legoLogger } from '@armathai/lego';
 import { PixiStatsPlugin } from '@armathai/pixi-stats';
 import { Application } from 'pixi.js';
 import PixiStage from './MainStage';
-import SoundController from './SoundController';
 import { fitDimension } from './Utils';
-import { assets } from './assets/assetsNames/assets';
 import { atlases } from './assets/assetsNames/atlas';
-import { fonts } from './assets/assetsNames/fonts';
 import { MAX_FPS } from './configs/Constants';
 import { mapCommands } from './configs/EventCommandPairs';
 import { ScreenSizeConfig } from './configs/ScreenSizeConfig';
@@ -38,7 +35,7 @@ class App extends Application {
             this.initStats();
             this.initLego();
         }
-        this.loadSounds();
+        this.loadAssets();
     }
 
     public appResize(): void {
@@ -60,26 +57,13 @@ class App extends Application {
     }
 
     private loadAssets(): void {
-        for (const asset of assets) {
-            const { name, path } = asset;
-            this.loader.add(name, path);
-        }
         for (const atlas of atlases) {
             const { name, json } = atlas;
             this.loader.add(name, json);
         }
-        for (const font of fonts) {
-            const { name, path } = font;
-            this.loader.add(name, path);
-        }
 
         this.loader.onComplete.add(this.onLoadComplete, this);
         this.loader.load();
-    }
-
-    private loadSounds(): void {
-        SoundController.loadSounds();
-        this.loadAssets();
     }
 
     private onLoadComplete(): void {

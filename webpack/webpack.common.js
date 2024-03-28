@@ -65,10 +65,6 @@ module.exports = {
                 // { from: './src/assets', to: 'assets' }
                 { from: './src/assets/assetsNames', to: 'assets/assetsNames' },
                 { from: './src/assets/atlas', to: 'assets/atlas' },
-                { from: './src/assets/audio', to: 'assets/audio' },
-                { from: './src/assets/fonts', to: 'assets/fonts' },
-                { from: './src/assets/spines', to: 'assets/spines' },
-                // { from: './src/assets/uncompressed', to: 'assets/uncompressed' },
             ],
         }),
     ],
