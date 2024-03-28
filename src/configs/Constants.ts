@@ -22,7 +22,7 @@ export const ClubsDoorPos = { x: 12 + 230, y: 160 + 140 };
 export const DiamondsPos = { x: -222 + 230, y: 76 + 140 };
 export const DiamondsDoorPos = { x: -50 + 230, y: 200 + 140 };
 
-export const SpadesHorsePos = { x: 45 + 230, y: 95 + 140 };
-export const HeartsHorsePos = { x: 15 + 230, y: 120 + 140 };
-export const ClubsHorsePos = { x: -25 + 230, y: 160 + 140 };
-export const DiamondsHorsePos = { x: -80 + 230, y: 215 + 140 };
+export const SpadesHorsePos = { x: 0 + 230, y: 85 + 160 };
+export const HeartsHorsePos = { x: -30 + 230, y: 110 + 160 };
+export const ClubsHorsePos = { x: -80 + 230, y: 150 + 160 };
+export const DiamondsHorsePos = { x: -140 + 230, y: 215 + 160 };

@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite } from 'pixi.js';
+import { AnimatedSprite, Container, Graphics, Sprite } from 'pixi.js';
 import {
     CLUBS,
     ClubsDoorPos,
@@ -44,6 +44,8 @@ export class Arena extends Container {
     private clubsHorse: Horse;
     private heartsHorse: Horse;
     private spadesHorse: Horse;
+
+    private animatedSprite: AnimatedSprite;
 
     constructor() {
         super();
@@ -133,10 +135,10 @@ export class Arena extends Container {
         this.diamonds = Sprite.from('diamondsStart.png');
         this.diamondsDoor = Sprite.from('diamondsClosed.png');
 
-        this.diamondsHorse = new Horse(DIAMONDS, { scale: 0.5 });
-        this.clubsHorse = new Horse(CLUBS, { scale: 0.45 });
-        this.heartsHorse = new Horse(HEARTS, { scale: 0.4 });
-        this.spadesHorse = new Horse(SPADES, { scale: 0.35 });
+        this.diamondsHorse = new Horse(DIAMONDS, { scale: 1 });
+        this.clubsHorse = new Horse(CLUBS, { scale: 0.9 });
+        this.heartsHorse = new Horse(HEARTS, { scale: 0.8 });
+        this.spadesHorse = new Horse(SPADES, { scale: 0.7 });
 
         this.setGatesInitialPositions();
 

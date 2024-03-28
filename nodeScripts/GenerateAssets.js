@@ -37,8 +37,9 @@ const paths = {
 
 const options = {
     textureName: '',
-    width: 4096,
-    height: 4096,
+    // TODO - set back to 2048
+    width: 5000,
+    height: 5000,
     quality: 80,
     scale: 1,
     fixedSize: false,

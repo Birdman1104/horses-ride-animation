@@ -17,3 +17,18 @@ export async function getData() {
 
     return arr;
 }
+
+const myHeaders = new Headers();
+myHeaders.append('Content-Type', 'application/json');
+
+const raw = JSON.stringify(1444116);
+
+fetch('https://m.ssplaywin.club/exchangeapi/xgame/book', {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+})
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
