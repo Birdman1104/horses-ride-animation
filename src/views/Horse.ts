@@ -33,14 +33,13 @@ export class Horse extends Container {
     private getFrames(): string[] {
         switch (this._type) {
             case SPADES:
-                // TODO fix types
-                return getHorseFrames(CLUBS);
+                return getHorseFrames(SPADES);
             case CLUBS:
                 return getHorseFrames(CLUBS);
             case DIAMONDS:
-                return getHorseFrames(CLUBS);
+                return getHorseFrames(DIAMONDS);
             case HEARTS:
-                return getHorseFrames(CLUBS);
+                return getHorseFrames(HEARTS);
             default:
                 throw Error('Specify horse type');
         }
