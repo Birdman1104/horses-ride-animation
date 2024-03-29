@@ -6,7 +6,7 @@ import { GameState } from '../models/GameModel';
 import { Arena } from './Arena';
 
 export class BoardView extends Container {
-    private arena: Arena;
+    private arena: Arena | null;
 
     private canMove = false;
 
@@ -31,21 +31,37 @@ export class BoardView extends Container {
     }
 
     private build(): void {
-        this.arena = new Arena();
-        this.arena.on('horseReachedFinishLine', () => {
-            lego.event.emit(BoardEvents.HorseReachedFinish);
-        });
-        this.addChild(this.arena);
+        this.buildArena();
+    }
 
-        // this.drawBounds();
+    private buildArena(): void {
+        this.arena = new Arena();
+        this.arena.on('horseReachedFinishLine', this.horseReachedFinishLine, this);
+        this.addChild(this.arena);
+    }
+
+    private horseReachedFinishLine(): void {
+        lego.event.emit(BoardEvents.HorseReachedFinish);
+    }
+
+    private destroyArena(): void {
+        this.arena?.off('horseReachedFinishLine', this.horseReachedFinishLine, this);
+        this.arena?.destroy();
+        this.arena = null;
+
+        // this.addChild(this.arena);
     }
 
     private onGameStateUpdate(state: GameState): void {
         this.canMove = state === GameState.Action;
 
         switch (state) {
+            case GameState.PreStart:
+                this.destroyArena();
+                this.buildArena();
+                break;
             case GameState.Action:
-                this.arena.start();
+                this.arena?.start();
                 break;
 
             default:

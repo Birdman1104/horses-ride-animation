@@ -1,4 +1,4 @@
-import { lego, legoLogger } from '@armathai/lego';
+import { lego } from '@armathai/lego';
 import { PixiStatsPlugin } from '@armathai/pixi-stats';
 import { Application } from 'pixi.js';
 import PixiStage from './MainStage';
@@ -86,7 +86,7 @@ class App extends Application {
     }
 
     private initLego(): void {
-        legoLogger.start(lego, Object.freeze({}));
+        // legoLogger.start(lego, Object.freeze({}));
     }
 
     private initStats(): void {

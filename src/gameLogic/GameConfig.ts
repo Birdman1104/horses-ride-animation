@@ -283,6 +283,61 @@ export const DATA = {
     },
 };
 
+export const WINNER_LOSER = [
+    {
+        status: 'WINNER',
+        properties: [
+            {
+                name: 'Segment',
+                value: '32',
+            },
+        ],
+        name: 'Spades',
+    },
+    {
+        status: 'LOSER',
+        properties: [
+            {
+                name: 'Segment',
+                value: '15',
+            },
+            {
+                name: 'Place',
+                value: '2',
+            },
+        ],
+        name: 'Hearts',
+    },
+    {
+        status: 'LOSER',
+        properties: [
+            {
+                name: 'Segment',
+                value: '7',
+            },
+            {
+                name: 'Place',
+                value: '4',
+            },
+        ],
+        name: 'Clubs',
+    },
+    {
+        status: 'LOSER',
+        properties: [
+            {
+                name: 'Segment',
+                value: '10',
+            },
+            {
+                name: 'Place',
+                value: '3',
+            },
+        ],
+        name: 'Diamonds',
+    },
+];
+
 // Step 1 :
 
 // gameData :  We only focus on the Spades, Hearts, Clubs, Diamonds

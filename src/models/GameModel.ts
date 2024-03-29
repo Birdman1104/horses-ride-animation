@@ -1,9 +1,11 @@
-import { CLUBS, DIAMONDS, HEARTS, SPADES } from '../configs/Constants';
-import { getData } from '../gameLogic';
+import { delayRunnable } from '../Utils';
+import { CARDS } from '../configs/Constants';
+import { getGameData } from '../gameLogic';
 import { ObservableModel } from './ObservableModel';
 
 export enum GameState {
     Unknown,
+    PreStart,
     Action,
     Finish,
 }
@@ -68,28 +70,63 @@ export class GameModel extends ObservableModel {
     }
 
     public async initialize(): Promise<void> {
-        await this.updateData();
-
-        if (anySegmentBiggerThanZero(this.data)) {
-            this.state = GameState.Action;
-
-            this._spadesSegment = getSegmentOf(SPADES, this.data);
-            this._heartsSegment = getSegmentOf(HEARTS, this.data);
-            this._clubsSegment = getSegmentOf(CLUBS, this.data);
-            this._diamondsSegment = getSegmentOf(DIAMONDS, this.data);
-        }
+        this.updateData();
     }
 
-    public async updateData(): Promise<void> {
-        this.data = await getData();
+    public updateData(): void {
+        this.fetchData();
+    }
+
+    public async fetchData(): Promise<void> {
+        this.data = await getGameData();
+        const cardsData = getCardsData(this.data);
+        // console.warn(this.data);
+
+        if (!anySegmentBiggerThanZero(cardsData)) {
+            this._state = GameState.PreStart;
+        }
+
+        // console.warn('game started - ', anySegmentBiggerThanZero(cardsData));
+        // console.warn(cardsInfo);
+
+        // console.warn(this.data.channel.game.bettingWindowTime, this.data.channel.game.bettingWindowPercentageComplete);
+
+        // if (this.data.find((el) => el.status !== 'IN_PLAY')) {
+        //     console.warn(this.data);
+        // }
+
+        // if (!anySegmentBiggerThanZero(this.data)) {
+        //     console.warn(this.data);
+
+        //     this.state = GameState.Action;
+
+        //     this._spadesSegment = getSegmentOf(SPADES, this.data);
+        //     this._heartsSegment = getSegmentOf(HEARTS, this.data);
+        //     this._clubsSegment = getSegmentOf(CLUBS, this.data);
+        //     this._diamondsSegment = getSegmentOf(DIAMONDS, this.data);
+        // }
+        // removeRunnable(() => this.fetchData());
+        delayRunnable(1, () => this.fetchData(), null);
     }
 }
+
+const getCardsData = (data: any): any[] => {
+    const { objects } = data.channel.game.gameData;
+    return objects.filter((e) => CARDS.indexOf(e.name) !== -1);
+};
 
 const getSegmentOf = (type: string, data: any): number => {
     return data.find((el) => el.name === type).properties.find((p) => p.name === 'Segment').value;
 };
 
 const anySegmentBiggerThanZero = (data: any): boolean => {
+    data.forEach((d) => {
+        d.properties.forEach((p) => {
+            if (p.name === 'Segment') {
+                console.log(p.value);
+            }
+        });
+    });
     return !!data.find((el) => el.properties.find((p) => p.name === 'Segment').value > 0);
 };
 
