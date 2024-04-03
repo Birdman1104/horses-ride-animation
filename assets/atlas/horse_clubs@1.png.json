@@ -1,0 +1,423 @@
+{
+  "frames": {
+    "clubs_horse_09.png": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 250,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 250,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_12.png": {
+      "frame": {
+        "x": 3,
+        "y": 163,
+        "w": 250,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 250,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_11.png": {
+      "frame": {
+        "x": 259,
+        "y": 3,
+        "w": 248,
+        "h": 153
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 248,
+        "h": 153
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_10.png": {
+      "frame": {
+        "x": 259,
+        "y": 162,
+        "w": 247,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 10,
+        "w": 247,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_04.png": {
+      "frame": {
+        "x": 3,
+        "y": 323,
+        "w": 245,
+        "h": 157
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 8,
+        "w": 245,
+        "h": 157
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_05.png": {
+      "frame": {
+        "x": 254,
+        "y": 323,
+        "w": 241,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 10,
+        "w": 241,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_13.png": {
+      "frame": {
+        "x": 3,
+        "y": 486,
+        "w": 241,
+        "h": 155
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 9,
+        "w": 241,
+        "h": 155
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_08.png": {
+      "frame": {
+        "x": 250,
+        "y": 486,
+        "w": 240,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 10,
+        "w": 240,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_14.png": {
+      "frame": {
+        "x": 513,
+        "y": 3,
+        "w": 240,
+        "h": 156
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 9,
+        "w": 240,
+        "h": 156
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_07.png": {
+      "frame": {
+        "x": 512,
+        "y": 165,
+        "w": 239,
+        "h": 155
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 9,
+        "w": 239,
+        "h": 155
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_06.png": {
+      "frame": {
+        "x": 496,
+        "y": 483,
+        "w": 238,
+        "h": 154
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 10,
+        "w": 238,
+        "h": 154
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_15.png": {
+      "frame": {
+        "x": 3,
+        "y": 647,
+        "w": 235,
+        "h": 156
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 7,
+        "y": 9,
+        "w": 235,
+        "h": 156
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_01.png": {
+      "frame": {
+        "x": 496,
+        "y": 643,
+        "w": 233,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 7,
+        "w": 233,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_00.png": {
+      "frame": {
+        "x": 759,
+        "y": 3,
+        "w": 230,
+        "h": 162
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 6,
+        "w": 230,
+        "h": 162
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_03.png": {
+      "frame": {
+        "x": 735,
+        "y": 643,
+        "w": 228,
+        "h": 158
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 8,
+        "w": 228,
+        "h": 158
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_16.png": {
+      "frame": {
+        "x": 757,
+        "y": 171,
+        "w": 227,
+        "h": 160
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 7,
+        "w": 227,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "clubs_horse_02.png": {
+      "frame": {
+        "x": 740,
+        "y": 337,
+        "w": 226,
+        "h": 158
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 8,
+        "w": 226,
+        "h": 158
+      },
+      "sourceSize": {
+        "w": 250,
+        "h": 174
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "horse_clubs.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 992,
+      "h": 806
+    },
+    "scale": 1
+  }
+}
