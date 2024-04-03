@@ -1,9 +1,10 @@
 export const GameModelEvents = {
-    StateUpdate: 'GameModelStateUpdate',
-    SpadesSegmentUpdate: 'GameModelSpadesSegmentUpdate',
-    HeartsSegmentUpdate: 'GameModelHeartsSegmentUpdate',
-    ClubsSegmentUpdate: 'GameModelClubsSegmentUpdate',
-    DiamondsSegmentUpdate: 'GameModelDiamondsSegmentUpdate',
+    StatusUpdate: 'GameModelStatusUpdate',
+    DataUpdate: 'GameModelDataUpdate',
+    SpadesDistanceUpdate: 'GameModelSpadesDistanceUpdate',
+    HeartsDistanceUpdate: 'GameModelHeartsDistanceUpdate',
+    ClubsDistanceUpdate: 'GameModelClubsDistanceUpdate',
+    DiamondsDistanceUpdate: 'GameModelDiamondsDistanceUpdate',
 };
 
 export const HeadModelEvents = { GameModelUpdate: 'HeadModelGameModelUpdate' };

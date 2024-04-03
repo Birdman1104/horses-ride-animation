@@ -1,4 +1,5 @@
-import { AnimatedSprite, Container, Graphics, Sprite } from 'pixi.js';
+import anime from 'animejs';
+import { AnimatedSprite, Container, Sprite } from 'pixi.js';
 import {
     CLUBS,
     ClubsDoorPos,
@@ -65,14 +66,48 @@ export class Arena extends Container {
         return [this.spadesHorse, this.heartsHorse, this.clubsHorse, this.diamondsHorse];
     }
 
+    public moveClubs(dx: number): void {
+        this.moveHorse(this.clubsHorse, dx);
+    }
+
+    public moveHearts(dx: number): void {
+        this.moveHorse(this.heartsHorse, dx);
+    }
+
+    public moveDiamonds(dx: number): void {
+        this.moveHorse(this.diamondsHorse, dx);
+    }
+
+    public moveSpades(dx: number): void {
+        this.moveHorse(this.spadesHorse, dx);
+    }
+
+    private moveHorse(horse, x): void {
+        anime({
+            targets: horse,
+            x: x * 20,
+            duration: (x / 4) * 1000,
+            easing: 'linear',
+        });
+    }
+
+    public hideGates(): void {
+        this.gates.forEach((g) => (g.x = -400));
+        this.doors.forEach((d) => (d.visible = false));
+    }
+
+    public animateHorses(): void {
+        this.horses.forEach((h) => h.playAnimation());
+    }
+
     public update(): void {
         this.move();
 
-        this.horses.forEach((h) => {
-            if (h.x > this.finish.x) {
-                this.emit('horseReachedFinishLine');
-            }
-        });
+        // this.horses.forEach((h) => {
+        //     if (h.x > this.finish.x) {
+        //         this.emit('horseReachedFinishLine');
+        //     }
+        // });
     }
 
     public move(): void {
@@ -91,6 +126,7 @@ export class Arena extends Container {
 
     public start(): void {
         this.doors.forEach((d) => (d.visible = false));
+        this.horses.forEach((h) => h.playAnimation());
     }
 
     public reset(): void {
@@ -190,14 +226,5 @@ export class Arena extends Container {
         this.fence2.position.set(this.fence.x + this.fence.width - 4, this.fence.y);
         this.lane.position.set(1, this.fence.y);
         this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
-    }
-
-    private drawBounds(): void {
-        const { x, y, width, height } = this.getBounds();
-        const gr = new Graphics();
-        gr.beginFill(0x22cc22, 0.5);
-        gr.drawRect(x, y, width, height);
-        gr.endFill();
-        this.addChild(gr);
     }
 }

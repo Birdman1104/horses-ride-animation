@@ -1,5 +1,5 @@
 import { lego } from '@armathai/lego';
-import { GameState } from '../models/GameModel';
+import { GameStatus } from '../gameLogic';
 import Head from '../models/HeadModel';
 import { gameModelGuard } from './Guards';
 
@@ -25,6 +25,6 @@ const shutdownModelsCommand = (): void => {
 };
 
 export const onHorseReachedFinishCommand = (): void => {
-    lego.command.payload(GameState.Finish).execute(setGameStateCommand);
+    lego.command.payload(GameStatus.FINISHED).execute(setGameStatusCommand);
 };
-const setGameStateCommand = (state: GameState): void => Head.gameModel?.setState(state);
+const setGameStatusCommand = (state: GameStatus): void => Head.gameModel?.setState(state);

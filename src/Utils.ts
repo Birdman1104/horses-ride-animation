@@ -1,4 +1,4 @@
-import { Rectangle } from 'pixi.js';
+import { Graphics, Rectangle } from 'pixi.js';
 
 export const lp = (l, p) => {
     const { clientWidth: w, clientHeight: h } = document.body;
@@ -100,4 +100,14 @@ export const shuffle = (arr: any[]): void => {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+};
+
+export const drawBounds = (gameObject: any, color = Math.random() * 0xffffff, alpha = 0.4): Graphics => {
+    const { x, y, width, height } = gameObject.getBounds();
+    const gr = new Graphics();
+    gr.beginFill(color, alpha);
+    gr.drawRect(x, y, width, height);
+    gr.endFill();
+    gameObject.addChild(gr);
+    return gr;
 };
