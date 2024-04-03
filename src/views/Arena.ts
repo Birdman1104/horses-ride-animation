@@ -135,9 +135,9 @@ export class Arena extends Container {
     }
 
     private buildArena(): void {
-        this.arena = new TilingSprite(Texture.from('arena_tile.png'), WIDTH * 2, 97);
-        this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 2, 41);
-        this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 2, 167);
+        this.arena = new TilingSprite(Texture.from('arena_tile.png'), WIDTH * 3, 97);
+        this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 3, 41);
+        this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 3, 167);
         this.lane = Sprite.from('lane.png');
         // this.finish = Sprite.from('finish.png');
 

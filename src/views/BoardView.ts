@@ -7,7 +7,6 @@ import { Arena } from './Arena';
 
 export class BoardView extends Container {
     private arena: Arena | null;
-
     private canMove = false;
 
     constructor() {
@@ -29,6 +28,10 @@ export class BoardView extends Container {
 
     public getBounds(skipUpdate?: boolean | undefined, rect?: PIXI.Rectangle | undefined): PIXI.Rectangle {
         return new Rectangle(0, 0, WIDTH, HEIGHT);
+    }
+
+    public rebuild(): void {
+        //
     }
 
     public update(): void {
@@ -83,6 +86,8 @@ export class BoardView extends Container {
 
         // this.arena.on('horseReachedFinishLine', this.horseReachedFinishLine, this);
         this.addChild(this.arena);
+
+        // this.gr = drawBounds(this);
     }
 
     // private horseReachedFinishLine(): void {
@@ -96,15 +101,14 @@ export class BoardView extends Container {
     }
 
     private onGameDataUpdate(newData: any, oldData: any): void {
+        console.log(newData);
         if (!oldData) {
             this.buildArena(newData);
         }
     }
 
     private onGameStatusUpdate(status: GameStatus): void {
-        console.warn(status);
-
-        this.canMove = status === GameStatus.STARTED;
+        this.canMove = status === GameStatus.STARTED || status === GameStatus.FINISHED;
 
         switch (status) {
             case GameStatus.STOPPED:
