@@ -24,34 +24,10 @@
         "y": 0.5
       }
     },
-    "fence.png": {
-      "frame": {
-        "x": 3,
-        "y": 317,
-        "w": 1818,
-        "h": 41
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 1,
-        "y": 0,
-        "w": 1818,
-        "h": 41
-      },
-      "sourceSize": {
-        "w": 1820,
-        "h": 41
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
     "sky.png": {
       "frame": {
         "x": 3,
-        "y": 364,
+        "y": 317,
         "w": 1810,
         "h": 167
       },
@@ -66,30 +42,6 @@
       "sourceSize": {
         "w": 1810,
         "h": 167
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "arena.png": {
-      "frame": {
-        "x": 3,
-        "y": 537,
-        "w": 1798,
-        "h": 97
-      },
-      "rotated": false,
-      "trimmed": true,
-      "spriteSourceSize": {
-        "x": 2,
-        "y": 0,
-        "w": 1798,
-        "h": 97
-      },
-      "sourceSize": {
-        "w": 1800,
-        "h": 97
       },
       "pivot": {
         "x": 0.5,
@@ -99,7 +51,7 @@
     "finish.png": {
       "frame": {
         "x": 3,
-        "y": 640,
+        "y": 490,
         "w": 197,
         "h": 394
       },
@@ -114,30 +66,6 @@
       "sourceSize": {
         "w": 197,
         "h": 394
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "horse.png": {
-      "frame": {
-        "x": 206,
-        "y": 640,
-        "w": 300,
-        "h": 365
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 300,
-        "h": 365
-      },
-      "sourceSize": {
-        "w": 300,
-        "h": 365
       },
       "pivot": {
         "x": 0.5,
@@ -146,8 +74,8 @@
     },
     "diamondsStart.png": {
       "frame": {
-        "x": 512,
-        "y": 640,
+        "x": 206,
+        "y": 490,
         "w": 224,
         "h": 271
       },
@@ -170,8 +98,8 @@
     },
     "clubsStart.png": {
       "frame": {
-        "x": 742,
-        "y": 640,
+        "x": 436,
+        "y": 490,
         "w": 183,
         "h": 209
       },
@@ -194,8 +122,8 @@
     },
     "heartsStart.png": {
       "frame": {
-        "x": 931,
-        "y": 640,
+        "x": 625,
+        "y": 490,
         "w": 156,
         "h": 181
       },
@@ -218,8 +146,8 @@
     },
     "spadesStart.png": {
       "frame": {
-        "x": 742,
-        "y": 855,
+        "x": 436,
+        "y": 705,
         "w": 126,
         "h": 160
       },
@@ -242,8 +170,8 @@
     },
     "start.png": {
       "frame": {
-        "x": 874,
-        "y": 855,
+        "x": 568,
+        "y": 705,
         "w": 96,
         "h": 144
       },
@@ -266,8 +194,8 @@
     },
     "diamondsClosed.png": {
       "frame": {
-        "x": 976,
-        "y": 827,
+        "x": 670,
+        "y": 677,
         "w": 53,
         "h": 136
       },
@@ -288,10 +216,34 @@
         "y": 0.5
       }
     },
+    "arena_tile.png": {
+      "frame": {
+        "x": 206,
+        "y": 767,
+        "w": 121,
+        "h": 97
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 121,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 121,
+        "h": 97
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
     "clubsClosed.png": {
       "frame": {
-        "x": 512,
-        "y": 917,
+        "x": 333,
+        "y": 767,
         "w": 30,
         "h": 93
       },
@@ -314,8 +266,8 @@
     },
     "heartsClosed.png": {
       "frame": {
-        "x": 548,
-        "y": 917,
+        "x": 369,
+        "y": 767,
         "w": 23,
         "h": 74
       },
@@ -336,10 +288,34 @@
         "y": 0.5
       }
     },
+    "fence_tile.png": {
+      "frame": {
+        "x": 670,
+        "y": 819,
+        "w": 61,
+        "h": 41
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 61,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 61,
+        "h": 41
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
     "spadesClosed.png": {
       "frame": {
-        "x": 1807,
-        "y": 537,
+        "x": 398,
+        "y": 767,
         "w": 15,
         "h": 56
       },
@@ -368,7 +344,7 @@
     "format": "RGBA8888",
     "size": {
       "w": 1826,
-      "h": 1037
+      "h": 887
     },
     "scale": 1
   }

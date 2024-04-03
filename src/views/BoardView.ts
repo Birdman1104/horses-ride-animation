@@ -1,6 +1,6 @@
 import { lego } from '@armathai/lego';
 import { Container, Rectangle } from 'pixi.js';
-import { BoardEvents } from '../events/MainEvents';
+import { HEIGHT, WIDTH } from '../configs/Constants';
 import { GameModelEvents } from '../events/ModelEvents';
 import { GameStatus } from '../gameLogic';
 import { Arena } from './Arena';
@@ -28,7 +28,7 @@ export class BoardView extends Container {
     }
 
     public getBounds(skipUpdate?: boolean | undefined, rect?: PIXI.Rectangle | undefined): PIXI.Rectangle {
-        return new Rectangle(0, 0, 800, 600);
+        return new Rectangle(0, 0, WIDTH, HEIGHT);
     }
 
     public update(): void {

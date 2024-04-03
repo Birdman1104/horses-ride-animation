@@ -1,5 +1,5 @@
 import anime from 'animejs';
-import { AnimatedSprite, Container, Sprite } from 'pixi.js';
+import { Container, Sprite, Texture, TilingSprite } from 'pixi.js';
 import {
     CLUBS,
     ClubsDoorPos,
@@ -19,14 +19,13 @@ import {
     SpadesHorsePos,
     SpadesPos,
     StartingGatePos,
+    WIDTH,
 } from '../configs/Constants';
 import { Horse } from './Horse';
 
 export class Arena extends Container {
-    private arena: Sprite;
-    private arena2: Sprite;
-    private fence: Sprite;
-    private fence2: Sprite;
+    private arena: TilingSprite;
+    private fence: TilingSprite;
     private lane: Sprite;
     private sky: Sprite;
     private finish: Sprite;
@@ -45,8 +44,6 @@ export class Arena extends Container {
     private clubsHorse: Horse;
     private heartsHorse: Horse;
     private spadesHorse: Horse;
-
-    private animatedSprite: AnimatedSprite;
 
     constructor() {
         super();
@@ -111,13 +108,10 @@ export class Arena extends Container {
     }
 
     public move(): void {
-        this.fence.x -= DEFAULT_SPEED;
-        this.fence2.x -= DEFAULT_SPEED;
+        this.fence.tilePosition.x -= DEFAULT_SPEED;
+        this.arena.tilePosition.x -= DEFAULT_SPEED * 0.7;
 
         this.finish.x -= DEFAULT_SPEED;
-
-        this.arena.x -= DEFAULT_SPEED * 0.7;
-        this.arena2.x -= DEFAULT_SPEED * 0.7;
 
         this.sky.x -= DEFAULT_SPEED * 0.3;
 
@@ -141,10 +135,8 @@ export class Arena extends Container {
     }
 
     private buildArena(): void {
-        this.arena = Sprite.from('arena.png');
-        this.arena2 = Sprite.from('arena.png');
-        this.fence = Sprite.from('fence.png');
-        this.fence2 = Sprite.from('fence.png');
+        this.arena = new TilingSprite(Texture.from('arena_tile.png'), WIDTH * 2, 97);
+        this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 2, 41);
         this.lane = Sprite.from('lane.png');
         this.sky = Sprite.from('sky.png');
         this.finish = Sprite.from('finish.png');
@@ -153,10 +145,8 @@ export class Arena extends Container {
 
         this.addChild(this.sky);
         this.addChild(this.arena);
-        this.addChild(this.arena2);
         this.addChild(this.lane);
         this.addChild(this.fence);
-        this.addChild(this.fence2);
         this.addChild(this.finish);
     }
 
@@ -221,9 +211,7 @@ export class Arena extends Container {
     private setArenaInitialPositions(): void {
         this.sky.position.set(0, 0);
         this.arena.position.set(-2, 128);
-        this.arena2.position.set(this.arena.x + this.arena.width - 4, this.arena.y);
         this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
-        this.fence2.position.set(this.fence.x + this.fence.width - 4, this.fence.y);
         this.lane.position.set(1, this.fence.y);
         this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
     }

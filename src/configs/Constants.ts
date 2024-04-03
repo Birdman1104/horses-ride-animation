@@ -26,3 +26,6 @@ export const SpadesHorsePos = { x: 0 + 230, y: 85 + 160 };
 export const HeartsHorsePos = { x: -30 + 230, y: 110 + 160 };
 export const ClubsHorsePos = { x: -80 + 230, y: 150 + 160 };
 export const DiamondsHorsePos = { x: -140 + 230, y: 215 + 160 };
+
+export const WIDTH = 800;
+export const HEIGHT = 600;
