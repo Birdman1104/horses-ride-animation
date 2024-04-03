@@ -111,7 +111,7 @@ export class Arena extends Container {
         this.fence.tilePosition.x -= DEFAULT_SPEED;
         this.arena.tilePosition.x -= DEFAULT_SPEED * 0.7;
 
-        this.finish.x -= DEFAULT_SPEED;
+        // this.finish.x -= DEFAULT_SPEED;
 
         this.sky.tilePosition.x -= DEFAULT_SPEED * 0.3;
 
@@ -139,7 +139,7 @@ export class Arena extends Container {
         this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 2, 41);
         this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 2, 167);
         this.lane = Sprite.from('lane.png');
-        this.finish = Sprite.from('finish.png');
+        // this.finish = Sprite.from('finish.png');
 
         this.setArenaInitialPositions();
 
@@ -147,7 +147,7 @@ export class Arena extends Container {
         this.addChild(this.arena);
         this.addChild(this.lane);
         this.addChild(this.fence);
-        this.addChild(this.finish);
+        // this.addChild(this.finish);
     }
 
     private buildStartingGate(): void {
@@ -213,6 +213,6 @@ export class Arena extends Container {
         this.arena.position.set(-2, 128);
         this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
         this.lane.position.set(1, this.fence.y);
-        this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
+        // this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
     }
 }
