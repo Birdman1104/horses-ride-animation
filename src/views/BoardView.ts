@@ -102,6 +102,8 @@ export class BoardView extends Container {
     }
 
     private onGameStatusUpdate(status: GameStatus): void {
+        console.warn(status);
+
         this.canMove = status === GameStatus.STARTED;
 
         switch (status) {

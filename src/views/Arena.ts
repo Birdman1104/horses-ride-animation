@@ -26,8 +26,8 @@ import { Horse } from './Horse';
 export class Arena extends Container {
     private arena: TilingSprite;
     private fence: TilingSprite;
+    private sky: TilingSprite;
     private lane: Sprite;
-    private sky: Sprite;
     private finish: Sprite;
 
     private startingGate: Sprite;
@@ -113,7 +113,7 @@ export class Arena extends Container {
 
         this.finish.x -= DEFAULT_SPEED;
 
-        this.sky.x -= DEFAULT_SPEED * 0.3;
+        this.sky.tilePosition.x -= DEFAULT_SPEED * 0.3;
 
         this.gates.forEach((g) => (g.x -= DEFAULT_SPEED * 1.1));
     }
@@ -137,8 +137,8 @@ export class Arena extends Container {
     private buildArena(): void {
         this.arena = new TilingSprite(Texture.from('arena_tile.png'), WIDTH * 2, 97);
         this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 2, 41);
+        this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 2, 167);
         this.lane = Sprite.from('lane.png');
-        this.sky = Sprite.from('sky.png');
         this.finish = Sprite.from('finish.png');
 
         this.setArenaInitialPositions();
