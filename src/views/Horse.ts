@@ -14,6 +14,10 @@ export class Horse extends Container {
         return this._type;
     }
 
+    get scaleX(): string {
+        return this.config.scale;
+    }
+
     public playAnimation(): void {
         this.animatedSprite.play();
     }

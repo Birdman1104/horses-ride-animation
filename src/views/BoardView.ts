@@ -74,9 +74,9 @@ export class BoardView extends Container {
                     // build on finish line
                     break;
                 case GameStatus.STARTED:
+                    this.adjustHorsesPositions(data);
                     this.arena.hideGates();
-
-                    // build on progress, hide the gates
+                    this.arena.alignHorses();
                     break;
 
                 default:
@@ -84,18 +84,17 @@ export class BoardView extends Container {
             }
         }
 
-        // this.arena.on('horseReachedFinishLine', this.horseReachedFinishLine, this);
         this.addChild(this.arena);
-
-        // this.gr = drawBounds(this);
     }
 
-    // private horseReachedFinishLine(): void {
-    //     lego.event.emit(BoardEvents.HorseReachedFinish);
-    // }
+    private adjustHorsesPositions(data: any): void {
+        this.arena?.setSpadesPos(data.Spades.distance);
+        this.arena?.setHeartsPos(data.Hearts.distance);
+        this.arena?.setDiamondsPos(data.Diamonds.distance);
+        this.arena?.setClubsPos(data.Clubs.distance);
+    }
 
     private destroyArena(): void {
-        // this.arena?.off('horseReachedFinishLine', this.horseReachedFinishLine, this);
         this.arena?.destroy();
         this.arena = null;
     }

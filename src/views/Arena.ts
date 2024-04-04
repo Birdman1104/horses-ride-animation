@@ -3,25 +3,24 @@ import { Container, Sprite, Texture, TilingSprite } from 'pixi.js';
 import {
     CLUBS,
     ClubsDoorPos,
-    ClubsHorsePos,
     ClubsPos,
     DEFAULT_SPEED,
     DIAMONDS,
     DiamondsDoorPos,
-    DiamondsHorsePos,
     DiamondsPos,
     HEARTS,
+    HORSES_POS,
     HeartsDoorPos,
-    HeartsHorsePos,
     HeartsPos,
     SPADES,
     SpadesDoorPos,
-    SpadesHorsePos,
     SpadesPos,
     StartingGatePos,
     WIDTH,
 } from '../configs/Constants';
 import { Horse } from './Horse';
+
+const DX = 17;
 
 export class Arena extends Container {
     private arena: TilingSprite;
@@ -63,6 +62,22 @@ export class Arena extends Container {
         return [this.spadesHorse, this.heartsHorse, this.clubsHorse, this.diamondsHorse];
     }
 
+    public setClubsPos(dx: number): void {
+        this.clubsHorse.x = 230 + dx * DX;
+    }
+
+    public setHeartsPos(dx: number): void {
+        this.heartsHorse.x = 230 + dx * DX;
+    }
+
+    public setDiamondsPos(dx: number): void {
+        this.diamondsHorse.x = 230 + dx * DX;
+    }
+
+    public setSpadesPos(dx: number): void {
+        this.spadesHorse.x = 230 + dx * DX;
+    }
+
     public moveClubs(dx: number): void {
         this.moveHorse(this.clubsHorse, dx);
     }
@@ -79,11 +94,18 @@ export class Arena extends Container {
         this.moveHorse(this.spadesHorse, dx);
     }
 
+    public alignHorses(): void {
+        this.horses.forEach((h) => {
+            this.moveHorse(h, 5);
+        });
+    }
+
     private moveHorse(horse, x): void {
+        const dif = (250 * (1 - horse.scaleX)) / 3;
         anime({
             targets: horse,
-            x: x * 20,
-            duration: (x / 4) * 1000,
+            x: 230 + x * DX + dif,
+            duration: (x / 5) * 1000,
             easing: 'linear',
         });
     }
@@ -202,17 +224,17 @@ export class Arena extends Container {
         this.diamonds.position.set(DiamondsPos.x, DiamondsPos.y);
         this.diamondsDoor.position.set(DiamondsDoorPos.x, DiamondsDoorPos.y);
 
-        this.diamondsHorse.position.set(DiamondsHorsePos.x, DiamondsHorsePos.y);
-        this.clubsHorse.position.set(ClubsHorsePos.x, ClubsHorsePos.y);
-        this.heartsHorse.position.set(HeartsHorsePos.x, HeartsHorsePos.y);
-        this.spadesHorse.position.set(SpadesHorsePos.x, SpadesHorsePos.y);
+        this.diamondsHorse.position.set(HORSES_POS.Diamonds.x, HORSES_POS.Diamonds.y);
+        this.clubsHorse.position.set(HORSES_POS.Clubs.x, HORSES_POS.Clubs.y);
+        this.heartsHorse.position.set(HORSES_POS.Hearts.x, HORSES_POS.Hearts.y);
+        this.spadesHorse.position.set(HORSES_POS.Spades.x, HORSES_POS.Spades.y);
     }
 
     private setArenaInitialPositions(): void {
         this.sky.position.set(0, 0);
         this.arena.position.set(-2, 128);
         this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
-        this.lane.position.set(1, this.fence.y);
+        this.lane.position.set(0, this.fence.y);
         // this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
     }
 }
