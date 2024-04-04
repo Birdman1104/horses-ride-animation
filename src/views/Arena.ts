@@ -20,7 +20,7 @@ import {
 } from '../configs/Constants';
 import { Horse } from './Horse';
 
-const DX = 17;
+const DX = 10;
 
 export class Arena extends Container {
     private arena: TilingSprite;
@@ -63,19 +63,19 @@ export class Arena extends Container {
     }
 
     public setClubsPos(dx: number): void {
-        this.clubsHorse.x = 230 + dx * DX;
+        this.clubsHorse.x = 150 + dx * DX;
     }
 
     public setHeartsPos(dx: number): void {
-        this.heartsHorse.x = 230 + dx * DX;
+        this.heartsHorse.x = 150 + dx * DX;
     }
 
     public setDiamondsPos(dx: number): void {
-        this.diamondsHorse.x = 230 + dx * DX;
+        this.diamondsHorse.x = 150 + dx * DX;
     }
 
     public setSpadesPos(dx: number): void {
-        this.spadesHorse.x = 230 + dx * DX;
+        this.spadesHorse.x = 150 + dx * DX;
     }
 
     public moveClubs(dx: number): void {

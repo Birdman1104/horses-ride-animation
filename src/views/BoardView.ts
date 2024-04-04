@@ -19,7 +19,6 @@ export class BoardView extends Container {
             .on(GameModelEvents.HeartsDistanceUpdate, this.onHeartsDistanceUpdate, this)
             .on(GameModelEvents.DiamondsDistanceUpdate, this.onDiamondsDistanceUpdate, this)
             .on(GameModelEvents.SpadesDistanceUpdate, this.onSpadesDistanceUpdate, this);
-        this.build();
     }
 
     get viewName() {
@@ -37,10 +36,6 @@ export class BoardView extends Container {
     public update(): void {
         if (!this.canMove) return;
         this.arena?.update();
-    }
-
-    private build(): void {
-        //
     }
 
     private onClubsDistanceUpdate(dx): void {

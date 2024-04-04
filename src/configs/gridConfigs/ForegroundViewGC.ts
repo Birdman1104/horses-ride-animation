@@ -1,3 +1,4 @@
+import { CellScale } from '@armathai/pixi-grid';
 import { lp } from '../../Utils';
 
 export const getForegroundGridConfig = () => {
@@ -12,7 +13,8 @@ const getForegroundGridLandscapeConfig = () => {
         bounds,
         cells: [
             {
-                name: 'tutorial',
+                name: 'splash',
+                scale: CellScale.fill,
                 bounds: { x: 0, y: 0, width: 1, height: 1 },
             },
         ],
@@ -27,7 +29,8 @@ const getForegroundGridPortraitConfig = () => {
         bounds,
         cells: [
             {
-                name: 'tutorial',
+                name: 'splash',
+                scale: CellScale.fill,
                 bounds: { x: 0, y: 0, width: 1, height: 1 },
             },
         ],
