@@ -1,6 +1,7 @@
 import { lego } from '@armathai/lego';
 import { Container, Rectangle } from 'pixi.js';
 import { HEIGHT, WIDTH } from '../configs/Constants';
+import { BoardEvents } from '../events/MainEvents';
 import { GameModelEvents } from '../events/ModelEvents';
 import { GameStatus } from '../gameLogic';
 import { Arena } from './Arena';
@@ -66,7 +67,10 @@ export class BoardView extends Container {
                     // build normally
                     break;
                 case GameStatus.FINISHED:
-                    // build on finish line
+                    this.adjustHorsesPositions(data);
+                    this.arena.setInFinishedState();
+                    // this.arena.alignHorses();
+                    // this.arena?.start();
                     break;
                 case GameStatus.STARTED:
                     this.adjustHorsesPositions(data);
@@ -78,6 +82,7 @@ export class BoardView extends Container {
                     break;
             }
         }
+        this.arena.on('horseReachedFinishLine', this.horseReachedFinishLine, this);
 
         this.addChild(this.arena);
     }
@@ -92,6 +97,10 @@ export class BoardView extends Container {
     private destroyArena(): void {
         this.arena?.destroy();
         this.arena = null;
+    }
+
+    private horseReachedFinishLine(): void {
+        lego.event.emit(BoardEvents.HorseReachedFinish);
     }
 
     private onGameDataUpdate(newData: any, oldData: any): void {
@@ -111,6 +120,9 @@ export class BoardView extends Container {
                 break;
             case GameStatus.STARTED:
                 this.arena?.start();
+                break;
+            case GameStatus.FINISHED:
+                this.arena?.prepareFinish();
                 break;
 
             default:

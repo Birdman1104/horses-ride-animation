@@ -1,12 +1,15 @@
+import { lego } from '@armathai/lego';
 import { ICellConfig, PixiGrid } from '@armathai/pixi-grid';
 import anime from 'animejs';
 import { Graphics } from 'pixi.js';
 import { getForegroundGridConfig } from '../configs/gridConfigs/ForegroundViewGC';
+import { BoardEvents } from '../events/MainEvents';
 export class ForegroundView extends PixiGrid {
     private splash: Graphics;
     constructor() {
         super();
 
+        lego.event.on(BoardEvents.HorseReachedFinish, this.flash, this);
         this.build();
     }
 

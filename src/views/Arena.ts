@@ -20,7 +20,7 @@ import {
 } from '../configs/Constants';
 import { Horse } from './Horse';
 
-const DX = 10;
+const DX = 15;
 
 export class Arena extends Container {
     private arena: TilingSprite;
@@ -43,6 +43,9 @@ export class Arena extends Container {
     private clubsHorse: Horse;
     private heartsHorse: Horse;
     private spadesHorse: Horse;
+
+    private movingFinishLine = false;
+    private stopped = false;
 
     constructor() {
         super();
@@ -96,15 +99,21 @@ export class Arena extends Container {
 
     public alignHorses(): void {
         this.horses.forEach((h) => {
-            this.moveHorse(h, 5);
+            this.moveHorse(h, 0);
         });
+    }
+
+    public prepareFinish(): void {
+        this.movingFinishLine = true;
+        // flash
+        // reset
     }
 
     private moveHorse(horse, x): void {
         const dif = (250 * (1 - horse.scaleX)) / 3;
         anime({
             targets: horse,
-            x: 230 + x * DX + dif,
+            x: 150 + x * DX + dif,
             duration: (x / 5) * 1000,
             easing: 'linear',
         });
@@ -119,21 +128,34 @@ export class Arena extends Container {
         this.horses.forEach((h) => h.playAnimation());
     }
 
-    public update(): void {
-        this.move();
+    public setInFinishedState(): void {
+        this.hideGates();
+        this.finish.x = this.getFirstHorseX();
+    }
 
-        // this.horses.forEach((h) => {
-        //     if (h.x > this.finish.x) {
-        //         this.emit('horseReachedFinishLine');
-        //     }
-        // });
+    public update(): void {
+        if (!this.stopped) {
+            this.move();
+
+            if (this.movingFinishLine) {
+                this.horses.forEach((h) => {
+                    if (h.x > this.finish.x) {
+                        this.stopped = true;
+                        this.horses.forEach((h) => h.stopAnimation());
+                        this.emit('horseReachedFinishLine');
+                    }
+                });
+            }
+        }
     }
 
     public move(): void {
         this.fence.tilePosition.x -= DEFAULT_SPEED;
         this.arena.tilePosition.x -= DEFAULT_SPEED * 0.7;
 
-        // this.finish.x -= DEFAULT_SPEED;
+        if (this.movingFinishLine) {
+            this.finish.x -= DEFAULT_SPEED;
+        }
 
         this.sky.tilePosition.x -= DEFAULT_SPEED * 0.3;
 
@@ -146,7 +168,10 @@ export class Arena extends Container {
     }
 
     public reset(): void {
+        this.movingFinishLine = false;
+        this.stopped = false;
         this.doors.forEach((d) => (d.visible = true));
+        this.finish.position.set(WIDTH + 200, this.lane.y - this.finish.height / 4 + 15);
         this.setGatesInitialPositions();
         this.setArenaInitialPositions();
     }
@@ -161,7 +186,7 @@ export class Arena extends Container {
         this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 3, 41);
         this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 3, 167);
         this.lane = Sprite.from('lane.png');
-        // this.finish = Sprite.from('finish.png');
+        this.finish = Sprite.from('finish.png');
 
         this.setArenaInitialPositions();
 
@@ -169,7 +194,7 @@ export class Arena extends Container {
         this.addChild(this.arena);
         this.addChild(this.lane);
         this.addChild(this.fence);
-        // this.addChild(this.finish);
+        this.addChild(this.finish);
     }
 
     private buildStartingGate(): void {
@@ -235,6 +260,17 @@ export class Arena extends Container {
         this.arena.position.set(-2, 128);
         this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
         this.lane.position.set(0, this.fence.y);
-        // this.finish.position.set(1820, this.lane.y - this.finish.height / 4 + 15);
+        this.finish.position.set(WIDTH + 200, this.lane.y - this.finish.height / 4 + 15);
+    }
+
+    private getFirstHorseX(): number {
+        let maxX = -1;
+        this.horses.forEach((h) => {
+            if (h.x > maxX) {
+                maxX = h.x;
+            }
+        });
+
+        return maxX;
     }
 }
