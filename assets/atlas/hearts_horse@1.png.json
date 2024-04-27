@@ -4,19 +4,19 @@
       "frame": {
         "x": 3,
         "y": 3,
-        "w": 250,
+        "w": 252,
         "h": 154
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 10,
-        "w": 250,
+        "x": 10,
+        "y": 9,
+        "w": 252,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -28,19 +28,19 @@
       "frame": {
         "x": 3,
         "y": 163,
-        "w": 250,
+        "w": 252,
         "h": 154
       },
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 0,
-        "y": 10,
-        "w": 250,
+        "x": 1,
+        "y": 9,
+        "w": 252,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -50,7 +50,7 @@
     },
     "hearts_horse_11.png": {
       "frame": {
-        "x": 259,
+        "x": 261,
         "y": 3,
         "w": 248,
         "h": 153
@@ -58,13 +58,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1,
-        "y": 10,
+        "x": 8,
+        "y": 9,
         "w": 248,
         "h": 153
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -74,7 +74,7 @@
     },
     "hearts_horse_10.png": {
       "frame": {
-        "x": 259,
+        "x": 261,
         "y": 162,
         "w": 247,
         "h": 154
@@ -82,13 +82,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 1,
-        "y": 10,
+        "x": 12,
+        "y": 9,
         "w": 247,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -106,13 +106,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 2,
-        "y": 8,
+        "x": 25,
+        "y": 6,
         "w": 245,
         "h": 157
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -130,13 +130,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 4,
-        "y": 10,
+        "x": 19,
+        "y": 9,
         "w": 241,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -154,13 +154,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 4,
+        "x": 11,
         "y": 9,
         "w": 241,
         "h": 155
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -178,13 +178,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 5,
-        "y": 10,
+        "x": 25,
+        "y": 9,
         "w": 240,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -194,7 +194,7 @@
     },
     "hearts_horse_14.png": {
       "frame": {
-        "x": 513,
+        "x": 515,
         "y": 3,
         "w": 240,
         "h": 156
@@ -202,13 +202,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 5,
-        "y": 9,
+        "x": 11,
+        "y": 8,
         "w": 240,
         "h": 156
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -218,7 +218,7 @@
     },
     "hearts_horse_07.png": {
       "frame": {
-        "x": 512,
+        "x": 514,
         "y": 165,
         "w": 239,
         "h": 155
@@ -226,13 +226,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 5,
+        "x": 25,
         "y": 9,
         "w": 239,
         "h": 155
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -250,13 +250,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 6,
-        "y": 10,
+        "x": 24,
+        "y": 9,
         "w": 238,
         "h": 154
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -274,13 +274,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 7,
-        "y": 9,
+        "x": 15,
+        "y": 6,
         "w": 235,
         "h": 156
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -298,13 +298,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 8,
-        "y": 7,
+        "x": 17,
+        "y": 2,
         "w": 233,
         "h": 160
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -314,7 +314,7 @@
     },
     "hearts_horse_00.png": {
       "frame": {
-        "x": 759,
+        "x": 761,
         "y": 3,
         "w": 230,
         "h": 162
@@ -322,13 +322,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 10,
-        "y": 6,
+        "x": 18,
+        "y": 0,
         "w": 230,
         "h": 162
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -346,13 +346,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 11,
-        "y": 8,
+        "x": 27,
+        "y": 6,
         "w": 228,
         "h": 158
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -362,7 +362,7 @@
     },
     "hearts_horse_16.png": {
       "frame": {
-        "x": 757,
+        "x": 759,
         "y": 171,
         "w": 227,
         "h": 160
@@ -370,13 +370,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 11,
-        "y": 7,
+        "x": 22,
+        "y": 2,
         "w": 227,
         "h": 160
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -394,13 +394,13 @@
       "rotated": false,
       "trimmed": true,
       "spriteSourceSize": {
-        "x": 12,
-        "y": 8,
+        "x": 27,
+        "y": 5,
         "w": 226,
         "h": 158
       },
       "sourceSize": {
-        "w": 250,
+        "w": 270,
         "h": 174
       },
       "pivot": {
@@ -415,7 +415,7 @@
     "image": "hearts_horse.png",
     "format": "RGBA8888",
     "size": {
-      "w": 992,
+      "w": 994,
       "h": 806
     },
     "scale": 1
