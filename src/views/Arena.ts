@@ -105,6 +105,7 @@ export class Arena extends Container {
 
     public prepareFinish(): void {
         this.movingFinishLine = true;
+        this.finish.visible = true;
         // flash
         // reset
     }
@@ -187,6 +188,7 @@ export class Arena extends Container {
         this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 3, 167);
         this.lane = Sprite.from('lane.png');
         this.finish = Sprite.from('finish.png');
+        this.finish.visible = false;
 
         this.setArenaInitialPositions();
 

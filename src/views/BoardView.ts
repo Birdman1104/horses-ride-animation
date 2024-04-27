@@ -26,7 +26,7 @@ export class BoardView extends Container {
         return 'BoardView';
     }
 
-    public getBounds(skipUpdate?: boolean | undefined, rect?: PIXI.Rectangle | undefined): PIXI.Rectangle {
+    public getBounds(): Rectangle {
         return new Rectangle(0, 0, WIDTH, HEIGHT);
     }
 
