@@ -72,10 +72,34 @@
         "y": 0.5
       }
     },
-    "diamondsStart.png": {
+    "arena_tile.png": {
       "frame": {
         "x": 206,
         "y": 490,
+        "w": 360,
+        "h": 97
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 97
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "diamondsStart.png": {
+      "frame": {
+        "x": 206,
+        "y": 593,
         "w": 224,
         "h": 271
       },
@@ -99,7 +123,7 @@
     "clubsStart.png": {
       "frame": {
         "x": 436,
-        "y": 490,
+        "y": 593,
         "w": 183,
         "h": 209
       },
@@ -146,8 +170,8 @@
     },
     "spadesStart.png": {
       "frame": {
-        "x": 436,
-        "y": 705,
+        "x": 625,
+        "y": 677,
         "w": 126,
         "h": 160
       },
@@ -170,8 +194,8 @@
     },
     "start.png": {
       "frame": {
-        "x": 568,
-        "y": 705,
+        "x": 757,
+        "y": 677,
         "w": 96,
         "h": 144
       },
@@ -194,8 +218,8 @@
     },
     "diamondsClosed.png": {
       "frame": {
-        "x": 670,
-        "y": 677,
+        "x": 787,
+        "y": 490,
         "w": 53,
         "h": 136
       },
@@ -210,30 +234,6 @@
       "sourceSize": {
         "w": 53,
         "h": 136
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "arena_tile.png": {
-      "frame": {
-        "x": 206,
-        "y": 767,
-        "w": 121,
-        "h": 97
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 121,
-        "h": 97
-      },
-      "sourceSize": {
-        "w": 121,
-        "h": 97
       },
       "pivot": {
         "x": 0.5,
@@ -242,8 +242,8 @@
     },
     "clubsClosed.png": {
       "frame": {
-        "x": 333,
-        "y": 767,
+        "x": 572,
+        "y": 490,
         "w": 30,
         "h": 93
       },
@@ -266,8 +266,8 @@
     },
     "heartsClosed.png": {
       "frame": {
-        "x": 369,
-        "y": 767,
+        "x": 436,
+        "y": 808,
         "w": 23,
         "h": 74
       },
@@ -290,8 +290,8 @@
     },
     "fence_tile.png": {
       "frame": {
-        "x": 670,
-        "y": 819,
+        "x": 465,
+        "y": 843,
         "w": 61,
         "h": 41
       },
@@ -314,8 +314,8 @@
     },
     "spadesClosed.png": {
       "frame": {
-        "x": 398,
-        "y": 767,
+        "x": 757,
+        "y": 827,
         "w": 15,
         "h": 56
       },
