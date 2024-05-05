@@ -18,6 +18,7 @@ import {
     StartingGatePos,
     WIDTH,
 } from '../configs/Constants';
+import { BASE64_IMAGES } from '../imagesBase64';
 import { Horse } from './Horse';
 
 const DX = 15;
@@ -172,7 +173,7 @@ export class Arena extends Container {
         this.movingFinishLine = false;
         this.stopped = false;
         this.doors.forEach((d) => (d.visible = true));
-        this.finish.position.set(WIDTH + 200, this.lane.y - this.finish.height / 4 + 15);
+        this.finish.position.set(WIDTH + 200, this.lane.y - 83);
         this.setGatesInitialPositions();
         this.setArenaInitialPositions();
     }
@@ -183,11 +184,11 @@ export class Arena extends Container {
     }
 
     private buildArena(): void {
-        this.arena = new TilingSprite(Texture.from('arena_tile.png'), WIDTH * 3, 97);
-        this.fence = new TilingSprite(Texture.from('fence_tile.png'), WIDTH * 3, 41);
-        this.sky = new TilingSprite(Texture.from('sky.png'), WIDTH * 3, 167);
-        this.lane = Sprite.from('lane.png');
-        this.finish = Sprite.from('finish.png');
+        this.arena = new TilingSprite(Texture.from(BASE64_IMAGES.GAME.arenaTile), WIDTH * 3, 97);
+        this.fence = new TilingSprite(Texture.from(BASE64_IMAGES.GAME.fenceTile), WIDTH * 3, 41);
+        this.sky = new TilingSprite(Texture.from(BASE64_IMAGES.GAME.sky), WIDTH * 3, 167);
+        this.lane = Sprite.from(BASE64_IMAGES.GAME.lane);
+        this.finish = Sprite.from(BASE64_IMAGES.GAME.finish);
         this.finish.visible = false;
 
         this.setArenaInitialPositions();
@@ -200,15 +201,15 @@ export class Arena extends Container {
     }
 
     private buildStartingGate(): void {
-        this.startingGate = Sprite.from('start.png');
-        this.spades = Sprite.from('spadesStart.png');
-        this.spadesDoor = Sprite.from('spadesClosed.png');
-        this.hearts = Sprite.from('heartsStart.png');
-        this.heartsDoor = Sprite.from('heartsClosed.png');
-        this.clubs = Sprite.from('clubsStart.png');
-        this.clubsDoor = Sprite.from('clubsClosed.png');
-        this.diamonds = Sprite.from('diamondsStart.png');
-        this.diamondsDoor = Sprite.from('diamondsClosed.png');
+        this.startingGate = Sprite.from(BASE64_IMAGES.GAME.start);
+        this.spades = Sprite.from(BASE64_IMAGES.GAME.spadesStart);
+        this.spadesDoor = Sprite.from(BASE64_IMAGES.GAME.spadesClosed);
+        this.hearts = Sprite.from(BASE64_IMAGES.GAME.heartsStart);
+        this.heartsDoor = Sprite.from(BASE64_IMAGES.GAME.heartsClosed);
+        this.clubs = Sprite.from(BASE64_IMAGES.GAME.clubsStart);
+        this.clubsDoor = Sprite.from(BASE64_IMAGES.GAME.clubsClosed);
+        this.diamonds = Sprite.from(BASE64_IMAGES.GAME.diamondsStart);
+        this.diamondsDoor = Sprite.from(BASE64_IMAGES.GAME.diamondsClosed);
 
         this.diamondsHorse = new Horse(DIAMONDS, { scale: 1 });
         this.clubsHorse = new Horse(CLUBS, { scale: 0.9 });
@@ -260,9 +261,9 @@ export class Arena extends Container {
     private setArenaInitialPositions(): void {
         this.sky.position.set(0, 0);
         this.arena.position.set(-2, 128);
-        this.fence.position.set(0, this.arena.y + this.arena.height / 2 + this.fence.height + 2);
+        this.fence.position.set(0, this.arena.y + 92);
         this.lane.position.set(0, this.fence.y);
-        this.finish.position.set(WIDTH + 200, this.lane.y - this.finish.height / 4 + 15);
+        this.finish.position.set(WIDTH + 200, this.lane.y - 83);
     }
 
     private getFirstHorseX(): number {

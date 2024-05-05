@@ -3,7 +3,6 @@ import { PixiStatsPlugin } from '@armathai/pixi-stats';
 import { Application } from 'pixi.js';
 import PixiStage from './MainStage';
 import { fitDimension } from './Utils';
-import { atlases } from './assets/assetsNames/atlas';
 import { MAX_FPS } from './configs/Constants';
 import { mapCommands } from './configs/EventCommandPairs';
 import { ScreenSizeConfig } from './configs/ScreenSizeConfig';
@@ -57,13 +56,7 @@ class App extends Application {
     }
 
     private loadAssets(): void {
-        for (const atlas of atlases) {
-            const { name, json } = atlas;
-            this.loader.add(name, json);
-        }
-
-        this.loader.onComplete.add(this.onLoadComplete, this);
-        this.loader.load();
+        this.onLoadComplete();
     }
 
     private onLoadComplete(): void {

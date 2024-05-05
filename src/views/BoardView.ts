@@ -40,22 +40,18 @@ export class BoardView extends Container {
     }
 
     private onClubsDistanceUpdate(dx): void {
-        console.log('clubs, ', dx);
         if (this.canMove) this.arena?.moveClubs(dx);
     }
 
     private onHeartsDistanceUpdate(dx): void {
-        console.log('hearts, ', dx);
         if (this.canMove) this.arena?.moveHearts(dx);
     }
 
     private onDiamondsDistanceUpdate(dx): void {
-        console.log('diamo, ', dx);
         if (this.canMove) this.arena?.moveDiamonds(dx);
     }
 
     private onSpadesDistanceUpdate(dx): void {
-        console.log('spado, ', dx);
         if (this.canMove) this.arena?.moveSpades(dx);
     }
 
@@ -104,7 +100,6 @@ export class BoardView extends Container {
     }
 
     private onGameDataUpdate(newData: any, oldData: any): void {
-        console.log(newData);
         if (!oldData) {
             this.buildArena(newData);
         }
