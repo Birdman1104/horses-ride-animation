@@ -26,8 +26,15 @@ class App extends Application {
         this.stage = new PixiStage();
         // @ts-ignore
         this.view.classList.add('app');
-        // @ts-ignore
-        document.body.appendChild(this.view);
+
+        const divsNodeList = document.getElementsByClassName('horse_animation');
+        if (divsNodeList.length !== 0) {
+            const div = divsNodeList[0];
+            div.appendChild(this.view);
+        } else {
+            // @ts-ignore
+            document.body.appendChild(this.view);
+        }
 
         globalThis.__PIXI_APP__ = this;
         if (process.env.NODE_ENV !== 'production') {

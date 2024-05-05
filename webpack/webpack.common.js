@@ -41,18 +41,18 @@ module.exports = {
             // },
         ],
     },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
-                    filename: '[name].bundle.js',
-                },
-            },
-        },
-    },
+    // optimization: {
+    //     splitChunks: {
+    //         cacheGroups: {
+    //             commons: {
+    //                 test: /[\\/]node_modules[\\/]/,
+    //                 name: 'vendors',
+    //                 chunks: 'all',
+    //                 filename: '[name].bundle.js',
+    //             },
+    //         },
+    //     },
+    // },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -60,12 +60,12 @@ module.exports = {
             template: './index.html',
             filename: 'index.html',
         }),
-        new CopyWebpackPlugin({
-            patterns: [
-                // { from: './src/assets', to: 'assets' }
-                { from: './src/assets/assetsNames', to: 'assets/assetsNames' },
-                { from: './src/assets/atlas', to: 'assets/atlas' },
-            ],
-        }),
+        // new CopyWebpackPlugin({
+        //     patterns: [
+        //         // { from: './src/assets', to: 'assets' }
+        //         { from: './src/assets/assetsNames', to: 'assets/assetsNames' },
+        //         { from: './src/assets/atlas', to: 'assets/atlas' },
+        //     ],
+        // }),
     ],
 };

@@ -4,7 +4,7 @@
     "description": "Playables Template Pixi",
     "main": "index.js",
     "scripts": {
-        "start": "npm run generateAssets && npm run generateEventNames && webpack serve --config webpack/webpack.dev.js",
+        "start": "npm run generateEventNames && webpack serve --config webpack/webpack.dev.js",
         "build": "webpack --config webpack/webpack.prod.js",
         "generateEventNames": "node nodeScripts/GenerateEventNames.js",
         "generateAssets": "node nodeScripts/GenerateAssets.js",

@@ -5,18 +5,18 @@ const WebpackObfuscator = require('webpack-obfuscator');
 module.exports = merge(common, {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].bundle.js',
-        chunkFilename: '[name].[contenthash].chunk.js',
+        filename: '[name].bundle.js',
+        // chunkFilename: '[name].chunk.js',
     },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    filename: '[name].[contenthash].bundle.js',
-                },
-            },
-        },
-    },
+    // optimization: {
+    //     splitChunks: {
+    //         cacheGroups: {
+    //             commons: {
+    //                 filename: '[name].bundle.js',
+    //             },
+    //         },
+    //     },
+    // },
     plugins: [
         new WebpackObfuscator(
             {
